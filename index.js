@@ -108,7 +108,7 @@ function createRequest (config) {
 
         // In these cases the browser will automatically set the correct Content-Type,
         // but only if that header hasn't been set yet. So that's why we're deleting it.
-        if (utils.isFormData(options.body) && utils.isStandardBrowserEnv()) {
+        if (utils.isFormData(options.body)) {
             headers.delete('Content-Type');
         }
     }
